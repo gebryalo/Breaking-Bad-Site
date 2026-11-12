@@ -1,123 +1,180 @@
-html, body {
-    background: #1ba11a url(./greenbackground.png) top left repeat;
-    font-family: "Comic Sans MS", cursive;
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap');
+
+:root {
+    --verde: #1ba11a;
+    --amarelo: #fff54f;
+    --amarelo-forte: #e8db0e;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+html {
+    width: 100%;
+    min-width: 0;
+}
+
+body {
+    margin: 8px;
+    background: var(--verde) url('./greenbackground.png') top left repeat;
+    font-family: "Comic Sans MS", "Comic Neue", cursive;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+header,
+main,
+footer {
+    min-width: 0;
 }
 
 .faixa-verde {
     font-weight: bolder;
 }
 
+.faixa-verde h3,
 h3 {
-    color: #fff54f;
+    color: var(--amarelo);
     text-align: center;
 }
 
 h1 {
     color: white;
-    font-family: times, helvetic, sans-serif;
+    font-family: "Times New Roman", Times, serif;
     text-align: center;
     font-size: 120px;
     margin-top: -20px;
 }
 
 h2 {
-    color: #fff54f;
-    font-family: Comic Sans, Comic Sans MS, cursive;
+    color: var(--amarelo);
+    font-family: "Comic Sans MS", "Comic Neue", cursive;
     text-align: center;
     font-size: 50px;
     margin-top: -80px;
     font-weight: lighter;
 }
 
-.first-text {
-    color: #fff54f;
-    font-family: Comic Sans MS, Comic Sans MS, cursive;
+/* Texto original da homenagem */
+.first-text,
+.second-text,
+.third-text,
+.forth-text,
+.fifth-text,
+.sixth-text,
+.sobre-projeto {
+    font-family: "Comic Sans MS", "Comic Neue", cursive;
     text-align: center;
-    font-size: 30px;
-    max-width: 900px;
-    margin: 40px auto;
-    line-height: 1.5
+    overflow-wrap: break-word;
 }
 
-.facewalter {
-    width: 400px;
-    height: auto;
-    display: block;
-    margin: 20px auto;
-    margin-top: -20px
+.first-text,
+.second-text,
+.third-text,
+.sobre-projeto {
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+.first-text {
+    color: var(--amarelo);
+    font-size: 30px;
+    line-height: 1.5;
 }
 
 .second-text {
-    color: #fff54f;
-    font-family: Comic Sans MS, Comic Sans MS, cursive;
-    text-align: center;
+    color: var(--amarelo);
     font-size: 30px;
-    max-width: 900px;
-    margin: 40px auto;
-    line-height: 1
-}
-
-.casa {
-    width: 550px;
-    height: auto;
-    display: block;
-    margin: 20px auto;
+    line-height: 1;
 }
 
 .third-text {
     color: #ffffff;
-    font-family: Comic Sans MS, Comic Sans MS, cursive;
-    text-align: center;
     font-size: 20px;
-    max-width: 900px;
-    margin: 40px auto;
-    line-height: 1.5
+    line-height: 1.5;
 }
 
-.forth-text {
-    color: #fff54f;
-    font-family: Comic Sans MS, Comic Sans MS, cursive;
-    text-align: center;
+.forth-text,
+.fifth-text,
+.sixth-text {
     font-size: 40px;
     font-weight: bold;
+}
+
+.forth-text,
+.fifth-text {
+    color: var(--amarelo);
 }
 
 .fifth-text {
     margin-top: 20px;
-    color: #fff54f;
-    font-family: Comic Sans MS, Comic Sans MS, cursive;
-    text-align: center;
-    font-size: 40px;
-    font-weight: bold;
 }
 
 .sixth-text {
+    color: var(--amarelo-forte);
     margin-top: 35px;
-    color: #e8db0e;
-    font-family: Comic Sans MS, Comic Sans MS, cursive;
-    text-align: center;
-    font-size: 40px;
-    font-weight: bold;
+}
+
+/* Imagens e botão */
+.facewalter,
+.casa,
+.banner,
+.clique {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.facewalter {
+    width: 400px;
+    margin-top: -20px;
+    margin-bottom: 20px;
+}
+
+.casa {
+    width: 550px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .banner {
     width: 1000px;
-    height: auto;
-    display: block;
-    margin: 20px auto;
-    margin-top: 50px
+    margin-top: 50px;
+    margin-bottom: 20px;
 }
 
 .clique {
     width: 400px;
-    height: auto;
-    display: block;
-    margin: 20px auto;
-    margin-top: 50px
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.aviso-doacao {
+    max-width: 800px;
+    margin: 22px auto 0;
+    padding: 0 16px;
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.45;
+    font-family: "Comic Sans MS", "Comic Neue", cursive;
 }
 
 .botao-doar {
     display: block;
+    width: fit-content;
+    max-width: 100%;
     margin: 50px auto 20px;
     padding: 0;
     background: none;
@@ -139,55 +196,71 @@ h2 {
     transform: scale(0.96);
 }
 
+.botao-doar:focus-visible,
+.botao-copiar:focus-visible {
+    outline: 3px solid white;
+    outline-offset: 5px;
+}
+
+/* Janela Pix */
 .quadro-qr {
-    font-family: times, helvetic, sans-serif;;
+    font-family: "Times New Roman", Times, serif;
     max-height: 0;
     overflow: hidden;
     opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    width: 100%;
     max-width: 500px;
     margin: 0 auto;
-    background: #fff54f;
+    padding: 0;
+    background: var(--amarelo);
     border-radius: 12px;
     text-align: center;
-    transition: max-height 0.5s ease, opacity 0.5s ease, padding 0.5s ease, margin 0.5s ease;
+    transition: max-height 0.5s ease, opacity 0.5s ease, padding 0.5s ease, margin 0.5s ease, visibility 0.5s;
 }
 
 .quadro-qr.aberto {
-    max-height: 600px;
+    max-height: 750px;
     opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
     padding: 20px;
     margin: 20px auto 60px;
 }
 
 .quadro-qr h3 {
-    color: #1ba11a;
+    color: var(--verde);
     font-size: 24px;
 }
 
 .qrcode {
     width: 300px;
-    height: auto;
-    display: block;
+    max-width: 100%;
     margin: 0 auto;
 }
 
 .quadro-qr p,
 .quadro-qr code,
 .dados-pix {
-    color: #1ba11a;
+    color: var(--verde);
 }
 
 .dados-pix {
     font-weight: bold;
     margin: 16px 0;
-    word-break: break-all; /* evita a chave estourar a largura no celular */
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+    word-break: break-word;
 }
 
 .dados-pix code {
+    display: inline;
     font-size: 0.95em;
     background: rgba(0, 0, 0, 0.08);
     padding: 2px 6px;
     border-radius: 4px;
+    overflow-wrap: anywhere;
 }
 
 .botao-copiar {
@@ -196,7 +269,7 @@ h2 {
     cursor: pointer;
     border: 2px solid #1a1a1a;
     border-radius: 6px;
-    background: #fff;
+    background: white;
 }
 
 .botao-copiar:hover {
@@ -207,13 +280,183 @@ h2 {
     min-height: 1.2em;
     font-size: 0.9rem;
 }
-.sobre-projeto {
-    color: #fff54f;
-    font-family: Comic Sans MS, Comic Sans MS, cursive;
-    text-align: center;
-    font-size: 30px;
-    max-width: 900px;
-    margin: 40px auto;
-    line-height: 1.5
 
+.sobre-projeto {
+    color: var(--amarelo);
+    font-size: 30px;
+    line-height: 1.5;
+}
+
+/* Celular e tablet: dimensões fluidas, sem rolagem lateral */
+@media (max-width: 768px) {
+    body {
+        margin: 0;
+        font-family: "Comic Neue", "Comic Sans MS", cursive;
+    }
+
+    .faixa-verde {
+        padding: 10px 15px;
+        background: rgba(0, 0, 0, 0.13);
+    }
+
+    .faixa-verde h3 {
+        margin: 0;
+        font-size: clamp(12px, 3.5vw, 16px);
+        line-height: 1.4;
+    }
+
+    header {
+        padding: 20px 12px 0;
+    }
+
+    h1 {
+        margin: 0;
+        font-size: clamp(42px, 11vw, 80px);
+        line-height: 1.03;
+        overflow-wrap: anywhere;
+    }
+
+    h2 {
+        margin: 8px 0 0;
+        font-size: clamp(22px, 5.4vw, 38px);
+        line-height: 1.2;
+        font-family: "Comic Neue", "Comic Sans MS", cursive;
+    }
+
+    .facewalter {
+        width: min(75vw, 330px);
+        margin: 20px auto 12px;
+    }
+
+    .first-text,
+    .second-text,
+    .third-text,
+    .forth-text,
+    .fifth-text,
+    .sixth-text,
+    .sobre-projeto {
+        font-family: "Comic Neue", "Comic Sans MS", cursive;
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .first-text,
+    .second-text,
+    .third-text,
+    .sobre-projeto {
+        max-width: 100%;
+        margin: 24px auto;
+    }
+
+    .first-text,
+    .second-text {
+        font-size: clamp(19px, 4.7vw, 25px);
+        line-height: 1.45;
+    }
+
+    .third-text {
+        font-size: clamp(17px, 4vw, 20px);
+        line-height: 1.6;
+    }
+
+    .third-text p + p {
+        margin-top: 1.25em;
+    }
+
+    .forth-text,
+    .fifth-text,
+    .sixth-text {
+        font-size: clamp(23px, 5.8vw, 34px);
+        line-height: 1.25;
+        margin-top: 20px;
+    }
+
+    .casa {
+        width: min(94vw, 550px);
+        margin: 24px auto;
+    }
+
+    .banner {
+        width: min(100%, 1000px);
+        margin: 32px auto 16px;
+    }
+
+    .aviso-doacao {
+        font-family: "Comic Neue", "Comic Sans MS", cursive;
+        font-size: 15px;
+        padding: 0 20px;
+    }
+
+    .botao-doar {
+        margin: 25px auto 15px;
+    }
+
+    .clique {
+        width: min(84vw, 400px);
+    }
+
+    .quadro-qr {
+        max-width: calc(100% - 28px);
+    }
+
+    .quadro-qr.aberto {
+        padding: 18px 14px;
+        margin: 18px auto 42px;
+    }
+
+    .quadro-qr h3 {
+        font-size: 21px;
+    }
+
+    .qrcode {
+        width: min(75vw, 270px);
+    }
+
+    .dados-pix {
+        font-size: 15px;
+    }
+
+    .sobre-projeto {
+        font-size: 18px;
+        line-height: 1.5;
+        margin: 35px auto 24px;
+    }
+}
+
+/* Telefones bem estreitos */
+@media (max-width: 380px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 21px;
+    }
+
+    .first-text,
+    .second-text,
+    .third-text,
+    .forth-text,
+    .fifth-text,
+    .sixth-text,
+    .sobre-projeto {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .first-text,
+    .second-text {
+        font-size: 18px;
+    }
+
+    .dados-pix {
+        font-size: 13px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .botao-doar .clique,
+    .quadro-qr {
+        transition: none;
+    }
 }

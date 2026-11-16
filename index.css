@@ -286,7 +286,6 @@ h2 {
     line-height: 1.5;
 }
 
-/* Celular e tablet: dimensões fluidas, sem rolagem lateral */
 @media (max-width: 768px) {
     body {
         margin: 0;
@@ -422,7 +421,6 @@ h2 {
     }
 }
 
-/* Telefones bem estreitos */
 @media (max-width: 380px) {
     h1 {
         font-size: 40px;
@@ -472,7 +470,7 @@ h2 {
 .n1 {
     text-align: left;
     font-size: 20px;
-    color: #fff54f;
+    color: white;
     padding-left: 22px;
 }
 
@@ -484,21 +482,22 @@ h2 {
 .textobaixo1 {
     text-align: left;
     font-size: 18px;
-    color: #fff54f;
+    color: white;
     padding-left: 22px;
     margin-top: -2px;
 }
+
 .Continuarlendo1 {
     text-align: left;
     font-size: 18px;
-    color: #fff54f;
+    color: white;
     padding-left: 22px;
 }
 
 .n2 {
     text-align: left;
     font-size: 20px;
-    color: #fff54f;
+    color: white;
     padding-left: 22px;
 }
 
@@ -510,14 +509,15 @@ h2 {
 .textobaixo2 {
     text-align: left;
     font-size: 18px;
-    color: #fff54f;
+    color: white;
     padding-left: 22px;
     margin-top: -2px;
 }
+
 .Continuarlendo2 {
     text-align: left;
     font-size: 18px;
-    color: #fff54f;
+    color: white;
     padding-left: 22px;
 }
 
@@ -552,27 +552,30 @@ h2 {
         width: 100%;
     }
 }
+
 .n3 {
     text-align: left;
     font-size: 20px;
-    color: #fff54f;
+    color: white;
 }
+
 .textobaixo3 {
     text-align: left;
     font-size: 18px;
-    color: #fff54f;
+    color: white;
     margin-top: -2px;
 }
+
 .Continuarlendo3 {
     text-align: left;
     font-size: 18px;
-    color: #fff54f;
+    color: white;
 }
+
 .melhorserie {
     margin-top: -20px;
 }
 
-/* Ajustes exclusivamente de responsividade: tablets e celulares */
 @media (max-width: 1050px) and (min-width: 769px) {
     .quadrodenoticias {
         gap: 20px;
@@ -665,5 +668,58 @@ h2 {
 
     .noticias h2 {
         font-size: 22px;
+    }
+}
+
+.texto-videos {
+    margin-top: 30px;
+}
+
+/* Evita que a margem negativa global dos h2 sobreponha as noticias */
+.texto-videos h2 {
+    margin: 0;
+    line-height: 1.2;
+}
+
+/* Vídeos responsivos: dois lado a lado em telas grandes */
+.videos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 48px auto 0;
+    padding: 0 20px;
+}
+
+.video1, .video2 {
+    min-width: 0;
+}
+
+.videos iframe {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border: 0;
+}
+
+@media (max-width: 768px) {
+    .texto-videos {
+        margin-top: 60px;
+        padding: 0 16px;
+    }
+
+    .texto-videos h2 {
+        margin: 0;
+        font-size: clamp(24px, 6vw, 38px);
+        line-height: 1.2;
+    }
+
+    .videos {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-top: 25px;
+        padding: 0 14px;
     }
 }
